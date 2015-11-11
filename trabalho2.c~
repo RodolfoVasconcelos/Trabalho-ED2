@@ -54,9 +54,13 @@ void imprimeLista(Lista *lista){
 	}
 }
 
-int main(int argc,char *arqv[]){//arqv[1] = nome do arquivo passado na execução do programa no terminal do linux	
+int main(int argc,char *arqv[]){//arqv[1] = nome do arquivo passado na execução do programa no terminal do linux
+	int inicio,fim;
+	inicio = clock();	
 	Lista *inteiros;
 	inteiros = lerArquivo(arqv[1]);
 	imprimeLista(inteiros);
+	fim = clock();
+	printf("\n%d\n",(inicio - fim));
 	return 0;
 }
